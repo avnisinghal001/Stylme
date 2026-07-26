@@ -1,0 +1,20 @@
+.venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.DS_Store
+processed/images/
+processed/image_upload_manifest.jsonl
+processed/codex_batches.jsonl
+processed/codex_results.jsonl
+processed/codex_proposals.jsonl
+processed/codex_runs/
+processed/*.sample.jsonl
+processed/processed.ai.csv
+processed/processed.codex.csv
+processed/validation_codex_report.json
+
+# Raw sources and the expanded CSV are local build inputs/artifacts. Commit the
+# reproducible scripts/config/docs and optionally the compressed artifact/LFS.
+raw/*.csv
+processed/processed.csv

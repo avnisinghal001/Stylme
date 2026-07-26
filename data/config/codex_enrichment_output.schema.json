@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["batchId", "results"],
+  "properties": {
+    "batchId": {"type": "string"},
+    "results": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "productKey",
+          "metadata",
+          "confidence",
+          "warnings",
+          "missingInfo"
+        ],
+        "properties": {
+          "productKey": {"type": "string"},
+          "metadata": {
+            "type": "array",
+            "maxItems": 12,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["key", "values"],
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["style", "theme", "occasion", "festival", "cultural_theme", "material", "pattern", "fit", "silhouette", "season", "mood", "outfit_role"]
+                },
+                "values": {"type": "array", "maxItems": 8, "items": {"type": "string"}}
+              }
+            }
+          },
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "warnings": {
+            "type": "array",
+            "maxItems": 10,
+            "items": {"type": "string"}
+          },
+          "missingInfo": {
+            "type": "array",
+            "maxItems": 10,
+            "items": {"type": "string"}
+          }
+        }
+      }
+    }
+  }
+}

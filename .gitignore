@@ -1,0 +1,23 @@
+# One local secret source for every application folder.
+.env
+backend/.env
+frontend/.env*
+data/.env*
+!.env.example
+
+# Local tool/deployment state.
+.vercel/
+**/__pycache__/
+*.py[cod]
+**/.venv/
+**/.pytest_cache/
+*.zip
+**/node_modules/
+**/.next/
+**/.ruff_cache/
+**/.coverage
+**/coverage/
+**/tmp/
+dist/
+data/raw/
+data/processed/

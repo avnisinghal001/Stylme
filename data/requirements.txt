@@ -1,0 +1,7 @@
+pgeocode==0.4.1
+pymongo>=4.10,<5
+Pillow>=11,<13
+openai>=2,<3
+
+# Optional image background removal; install only in a supported Python runtime.
+# rembg[cpu]>=2.0.75,<3
